@@ -1,0 +1,29 @@
+body{
+	margin: 50px;
+}
+h1{
+	
+}
+table{
+	width: 100px;
+	height: 100px;
+}
+td{
+	width: 25px;
+	height: 25px;
+}
+
+input{
+	width: 26px;
+	height: 26px;
+	background-color: gray;
+}
+button{
+	width: 120px;
+	height: 25px;
+}
+.apretado{
+	border-style: ridge;
+	width: 26px;
+	height: 26px;
+}
