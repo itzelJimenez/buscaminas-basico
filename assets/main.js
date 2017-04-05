@@ -112,6 +112,14 @@ function crearTabla(){
 
 
 }
+function alerta(){
+	alert("Regresa al juego");
+}
 
+function stop(e){
+	e.stopPropagation();
+}
 recargar.addEventListener("click", reiniciar)
 disena.addEventListener("click", crearTabla)
+document.addEventListener("click", alerta)
+tabla.addEventListener("click", stop)
