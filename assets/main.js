@@ -1,5 +1,7 @@
-//
+//Botones: recargar y crear tabla
 var recargar =document.getElementById('reiniciar');
+var diseña = document.getElementById('diseña');
+//Bombas, numeros y casillas vacias
 var vaciosLength=document.getElementsByClassName('vacio').length;
 var bombas=document.getElementsByClassName('bomb');
 var tabla = document.getElementById('tabla');
@@ -82,4 +84,34 @@ function reiniciar(){
 	location.reload();
 }
 
+function borrarTabla(){
+	var tabla=document.getElementById("tabla");
+	var body=document.body;
+	body.removeChild(tabla);
+}
+function crearTabla(){
+	borrarTabla();
+	var numColumnas=parseInt(prompt('escribe un numero de columnas'));
+	var numFilas=parseInt(prompt('escribe un número de filas'));
+	var numCasillass=numFilas*numColumnas;
+	var bombas=parseInt(prompt('escribe el número de bombas'));
+
+		var tablaNueva=document.createElement("table");
+    tablaNueva.border="2";
+    tablaNueva.align="center";
+    tablaNueva.id="tabla";
+    var tr=document.createElement("tr");
+    var td=document.createElement("td");
+    td.innerText="0";
+    td.colspan="4";
+    td.align="center";
+
+    tr.appendChild(td);
+    tablaNueva.appendChild(tr);
+    document.body.appendChild(tablaNueva);
+
+
+}
+
 recargar.addEventListener("click", reiniciar)
+diseña.addEventListener("click", crearTabla)
