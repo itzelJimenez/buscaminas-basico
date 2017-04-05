@@ -110,6 +110,23 @@ function crearTabla(){
     tablaNueva.appendChild(tr);
     document.body.appendChild(tablaNueva);
 
+    for (var i=0; i<numFilas;i++){
+        var tr=document.createElement("tr");
+        for (var j=0; j<numColumnas;j++){
+            var td=document.createElement("td");
+            var boton=document.createElement("input");
+            boton.type="button";
+            boton.value="";
+            td.appendChild(boton);
+            tr.appendChild(td);
+    
+            
+        }
+        tablaNueva.appendChild(tr);
+    }
+    
+    body.appendChild(tablaNueva);
+
 
 }
 function alerta(){
