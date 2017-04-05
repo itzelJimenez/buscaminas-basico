@@ -1,6 +1,6 @@
 //Botones: recargar y crear tabla
 var recargar =document.getElementById('reiniciar');
-var diseña = document.getElementById('diseña');
+var disena = document.getElementById('diseña');
 //Bombas, numeros y casillas vacias
 var vaciosLength=document.getElementsByClassName('vacio').length;
 var bombas=document.getElementsByClassName('bomb');
@@ -61,7 +61,7 @@ function color(){
 
 function bomba(){
 	for (var i=0; i<bombas.length;i++){
-		bombas[i].style.background = "";
+		bombas[i].style.background = "red";
 		bombas[i].value = "💣";
 	}
 	perdiste();
@@ -114,4 +114,4 @@ function crearTabla(){
 }
 
 recargar.addEventListener("click", reiniciar)
-diseña.addEventListener("click", crearTabla)
+disena.addEventListener("click", crearTabla)
